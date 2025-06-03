@@ -1,2 +1,3 @@
 import './style.css'
-console.log("Hello World");
+import { queue } from '/src/dataTypes/queue'
+console.log(queue);
