@@ -49,6 +49,13 @@ body > * {
     border-radius: 10px;
 }
 
+.dataBtnContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    gap: 20px;
+}
+
 
 .dataBtn {
     padding: 10px 20px;
@@ -57,6 +64,7 @@ body > * {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 100px;
   }
   
   .dataBtn:hover {
@@ -67,19 +75,20 @@ body > * {
     background-color: var(--primary-active-color);
   }
 
-  .filaContainer {
+  .filaContainer, .pilaContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     line-height: 44px;
   }
 
-  .colaInfo {
+  .colaInfo, .pilaInfo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     line-height: 44px;
+    margin-bottom: 20px;
   }
 
   .uiFila {
@@ -89,6 +98,27 @@ body > * {
     flex-wrap: wrap;
     gap: 10px;
     line-height: 44px;
+  }
+
+  .uiPila {
+    display: grid;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .uiPilaContainer {
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .pilaItemContainer {
+    padding: 5px;
+    border-left: 8px solid var(--primary-color);
+    border-right: 8px solid var(--primary-color);
+    border-bottom: 8px solid var(--primary-color);
+    border-radius: 0 0 10px 10px;
   }
 
   .fade-lento {
