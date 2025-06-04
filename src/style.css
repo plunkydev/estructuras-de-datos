@@ -66,3 +66,37 @@ body > * {
   .dataBtn:active {
     background-color: var(--primary-active-color);
   }
+
+  .filaContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 44px;
+  }
+
+  .colaInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 44px;
+  }
+
+  .uiFila {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    line-height: 44px;
+  }
+
+  .fade-lento {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  /* Cuando agregues esta clase, pasa a opacity: 0 en 1 s */
+  .fade-lento.oculto {
+    opacity: 0;
+  }
