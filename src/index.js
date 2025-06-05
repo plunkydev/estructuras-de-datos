@@ -1,6 +1,6 @@
 import './style.css'
 import { filasUI, addFila, removeFila } from '/src/components/filas'
-import { pilasUI } from '/src/components/pilas'
+import { pilasUI, addPila, removePila } from '/src/components/pilas'
 
 const dataContainer = document.getElementById('dataContainer');
 const dataBtnFilas = document.getElementById('dataBtnFilas');
@@ -14,4 +14,6 @@ dataBtnFilas.addEventListener('click', () => {
 
 dataBtnPila.addEventListener('click', () => {
     dataContainer.innerHTML = pilasUI();
+    document.getElementById('addPila').addEventListener('click', addPila);
+    document.getElementById('removePila').addEventListener('click', removePila);
 });
