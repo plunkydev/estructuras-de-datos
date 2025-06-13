@@ -24,6 +24,35 @@ class LinkedList {
         this.size++;
     }
 
+    remove(data) {
+        if (!this.head) return null;
+
+        let current = this.head;
+        let previous = null;
+
+        while (current) {
+            if (current.data === data) {
+                if (previous) {
+                    previous.next = current.next;
+                    if (!current.next) {
+                        this.tail = previous;
+                    }
+                } else {
+                    this.head = current.next;
+                    if (!this.head) {
+                        this.tail = null;
+                    }
+                }
+                this.size--;
+                return current.data;
+            }
+            previous = current;
+            current = current.next;
+        }
+
+        return null;
+    }
+
     print() {
         if(!this.size) return null;
         let result = ''
@@ -40,8 +69,5 @@ class LinkedList {
 }
 
 const list = new LinkedList();
-for (let i = 1; i < 10; i++) {
-    list.add(i)
-}
-console.log(list.print())
-console.log(list)
+
+export { list }
