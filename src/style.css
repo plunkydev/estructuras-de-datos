@@ -75,14 +75,14 @@ body > * {
     background-color: var(--primary-active-color);
   }
 
-  .filaContainer, .pilaContainer {
+  .filaContainer, .pilaContainer, .linkedLisContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     line-height: 44px;
   }
 
-  .colaInfo, .pilaInfo {
+  .colaInfo, .pilaInfo, .linkedListInfo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -141,4 +141,57 @@ body > * {
   /* Cuando agregues esta clase, pasa a opacity: 0 en 1 s */
   .fade-lento.oculto {
     opacity: 0;
+  }
+
+  .uiLinkedList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .listInput {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    max-width: 100px;
+  }
+
+  .linkedListItemContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    /*  */height: 77px;
+    margin: 10px 0 5px 0;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    border: 5px solid var(--primary-color);
+    overflow: auto;
+  }
+
+  .listItem {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+    min-width: 80px;
+  }
+
+  .data, .next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data {
+    border-right: 3px solid var(--primary-color);
+  }
+
+  .listItem::after {
+    content: "->";
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
