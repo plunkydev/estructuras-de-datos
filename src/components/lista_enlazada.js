@@ -11,13 +11,13 @@ const listaEnlazadaUi = () => {
                         <label for="addNodoValue">Agregar dato
                             <input class="listInput" type="number" placeholder="Numero" id="addNodoValue">
                         </label>
-                        <button class="dataBtn" type="button">Agregar</button>
+                        <button class="dataBtn" id="btnAddNodo" type="button">Agregar</button>
                     </div>
                     <div class="removeNodoContainer">
                         <label for="removeNodoValue">Eliminar dato
                             <input class="listInput" type="number" placeholder="en lista" id="removeNodoValue">
                         </label>
-                        <button class="dataBtn" type="button">Eliminar</button>
+                        <button class="dataBtn" id="btnRemoveNodo" type="button">Eliminar</button>
                     </div>
                 </div>
                 <div class="linkedListItemContainer border" id="linkedListItemContainer">
