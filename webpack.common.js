@@ -28,5 +28,32 @@ module.exports = {
         type: 'asset/resource'
       }
     ]
+  },
+  resolve: {
+  fallback: {
+    path: false,
+    fs: false,
+    os: false,
+    util: false,
+    https: false,
+    http: false,
+    crypto: false,
+    stream: false,
+    zlib: false,
+    vm: false,
+    buffer: false,
+    url: false,
+    assert: false,
+    constants: false,
+    child_process: false,
+    worker_threads: false,
+    module: false,
+    querystring: false,
+    'uglify-js': false,
+    '@swc/core': false,
+    esbuild: false,
+    inspector: false
   }
 }
+}
+
